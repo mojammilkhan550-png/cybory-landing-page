@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYBORG X</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+padding:20px;
+z-index:100;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#00f7ff;
+text-shadow:0 0 10px #00f7ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#050816,#091b40,#00f7ff22);
+}
+
+.hero h1{
+font-size:4rem;
+color:#00f7ff;
+text-shadow:0 0 20px #00f7ff;
+}
+
+.hero p{
+margin:20px 0;
+font-size:1.2rem;
+}
+
+.btn{
+padding:14px 28px;
+background:#00f7ff;
+color:black;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.section{
+padding:100px 10%;
+text-align:center;
+}
+
+.cards{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+width:300px;
+padding:25px;
+border:1px solid #00f7ff;
+background:#111a3a;
+border-radius:15px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00f7ff;
+}
+
+footer{
+background:#0a0f2c;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+nav{
+flex-direction:column;
+gap:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">CYBORG X</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>THE FUTURE IS CYBERNETIC</h1>
+<p>Advanced AI • Robotics • Human Enhancement</p>
+<button class="btn" onclick="scrollToFeatures()">Explore</button>
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>About CYBORG X</h2>
+<br>
+<p>
+CYBORG X combines Artificial Intelligence, Robotics and
+Human-Centered Design to create futuristic digital experiences.
+</p>
+</section>
+
+<section id="features" class="section">
+<h2>Advanced Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>AI Brain</h3>
+<p>Advanced neural intelligence for decision making.</p>
+</div>
+
+<div class="card">
+<h3>Cyber Vision</h3>
+<p>Real-time image analysis and enhanced perception.</p>
+</div>
+
+<div class="card">
+<h3>Smart Connectivity</h3>
+<p>Connect with all devices through intelligent networks.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Join The Future</h2>
+<br>
+<button class="btn" onclick="showMessage()">Connect Now</button>
+<p id="msg" style="margin-top:20px;"></p>
+</section>
+
+<footer>
+<p>© 2026 CYBORG X | Developed by Mojammil Khan</p>
+</footer>
+
+<script>
+function scrollToFeatures(){
+document.getElementById('features').scrollIntoView({
+behavior:'smooth'
+});
+}
+
+function showMessage(){
+document.getElementById('msg').innerHTML =
+'Welcome to the Future of Cyber Technology!';
+}
+</script>
+
+</body>
+</html>
